@@ -1,6 +1,7 @@
 # Tailwind CSS Setup with Vite and React
 
 This guide provides a step-by-step process to set up a React project with Vite and integrate Tailwind CSS, along with some useful plugins and configurations.
+https://tailwindcss.com/docs/guides/vite
 
 ## Create Vite Project
 
