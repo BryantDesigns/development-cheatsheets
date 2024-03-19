@@ -15,8 +15,8 @@ npm create vite@latest ./ -- --template react
 Install Tailwind CSS and initiate its configuration:
 
 ```bash
-npm install -D tailwindcss
-npx tailwindcss init
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
 ```
 To use Tailwind with some common UI components and icons, install Headless UI and Heroicons:
 
@@ -39,14 +39,22 @@ Include the installed plugins in your Tailwind configuration:
 
 
 ```bash
-module.exports = {
-  plugins: [
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+    plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/container-queries"),
     require("@tailwindcss/forms"),
   ],
-};
+}
 ```
 ## Code Formatting with Prettier
 For better code formatting, especially with Tailwind CSS, install Prettier and its Tailwind CSS plugin:
