@@ -34,26 +34,17 @@ npm install -D @tailwindcss/container-queries
 npm install -D @tailwindcss/forms
 npm install -D @tailwindcss/aspect-ratio
 ```
-## Update `tailwind.config.js`
+## Update `.prettierrc`
 Include the installed plugins in your Tailwind configuration:
 
 
 ```bash
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-    plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/container-queries"),
-    require("@tailwindcss/forms"),
-  ],
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true,
+    "plugins": ["prettier-plugin-tailwindcss"]
 }
 ```
 ## Code Formatting with Prettier
